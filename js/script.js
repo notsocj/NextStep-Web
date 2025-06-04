@@ -76,6 +76,66 @@ document.addEventListener('DOMContentLoaded', function() {
     // Run on load and scroll
     window.addEventListener('load', animateOnScroll);
     window.addEventListener('scroll', animateOnScroll);
+      // Contact Form Handling
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('form-message');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form elements
+            const submitBtn = document.getElementById('submit-btn');
+            const submitText = document.getElementById('submit-text');
+            const submitLoader = document.getElementById('submit-loader');
+            
+            // Show loading state
+            submitText.classList.add('hidden');
+            submitLoader.classList.remove('hidden');
+            submitBtn.disabled = true;
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            // Send form data using fetch API to Formspree
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Network response was not ok.');
+                }
+            })
+            .then(data => {
+                // Show success message
+                formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+                formMessage.classList.add('bg-green-100', 'text-green-700');
+                formMessage.innerHTML = '<p>Thank you for your message! We will get back to you soon.</p>';
+                
+                // Reset form
+                contactForm.reset();
+            })
+            .catch(error => {
+                // Show error message
+                formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+                formMessage.classList.add('bg-red-100', 'text-red-700');
+                formMessage.innerHTML = '<p>Oops! There was a problem submitting your form. Please try again or contact us directly.</p>';
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                // Reset button state
+                submitText.classList.remove('hidden');
+                submitLoader.classList.add('hidden');
+                submitBtn.disabled = false;
+            });
+        });
+    }
 });
 
 // Enhanced testimonial slider
