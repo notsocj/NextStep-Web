@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="font-poppins leading-relaxed text-slate-700 bg-gray-50 overflow-x-hidden">
+<body class="font-poppins leading-relaxed text-slate-800 bg-stone-100 overflow-x-hidden">
    
-    <header class="bg-gray-50 shadow-sm fixed w-full top-0 z-50 transition-all duration-300">
+    <header class="bg-stone-100 shadow-sm fixed w-full top-0 z-50 transition-all duration-300">
         <div class="w-11/12 max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
@@ -32,122 +32,171 @@
                         <li class="ml-9"><a href="contact.html" class="nav-link text-slate-700 font-medium relative pb-1">Contact</a></li>
                     </ul>
                     <div class="hamburger hidden cursor-pointer z-30">
-                        <span class="block w-7 h-0.5 my-1.5 bg-blue-700 transition-all duration-300 rounded"></span>
-                        <span class="block w-7 h-0.5 my-1.5 bg-blue-700 transition-all duration-300 rounded"></span>
-                        <span class="block w-7 h-0.5 my-1.5 bg-blue-700 transition-all duration-300 rounded"></span>
+                        <span class="block w-7 h-0.5 my-1.5 bg-slate-800 transition-all duration-300 rounded"></span>
+                        <span class="block w-7 h-0.5 my-1.5 bg-slate-800 transition-all duration-300 rounded"></span>
+                        <span class="block w-7 h-0.5 my-1.5 bg-slate-800 transition-all duration-300 rounded"></span>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="hero-section pt-44 pb-24 text-center relative overflow-hidden">
-        <div class="w-11/12 max-w-6xl mx-auto px-4">
-            <div class="hero-content">
-                <h1 class="text-6xl mb-6 text-white font-bold font-montserrat animate-fade-in-down">Our Projects</h1>
-                <p class="text-xl max-w-2xl mx-auto mb-10 text-white/95 animate-fade-in-up">Showcasing our innovative solutions and successful implementations</p>
-            </div>
+    <section class="page-header text-center relative">
+        <div class="w-11/12 max-w-6xl mx-auto px-4 relative z-10">
+            <nav class="breadcrumb text-sm mb-4">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span class="text-white">Projects</span>
+            </nav>
+            <h1 class="text-5xl mb-4 text-white font-bold font-montserrat">Our Projects</h1>
+            <p class="text-lg max-w-2xl mx-auto text-white/90">Showcasing our innovative solutions and successful implementations</p>
         </div>
     </section>
 
-    <section class="py-24 bg-slate-50">
+    <section class="py-32 bg-slate-200 section-enhanced">
         <div class="w-11/12 max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-bold font-montserrat text-blue-700 mb-2 text-center relative inline-block">Featured Projects</h2>
-            <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl font-bold font-montserrat text-slate-800">Featured Projects</h2>
+                <p class="section-subtitle">Explore our portfolio of successful digital solutions that have transformed businesses</p>
+            </div>
+            
+            <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="project-card rounded-xl overflow-hidden shadow-md transition-all duration-300 relative bg-gray-50 hover:-translate-y-3 hover:shadow-lg">
-                    <div class="project-image h-48 bg-gradient-to-br from-blue-600 to-sky-400 relative overflow-hidden transition-all duration-300 flex items-center justify-center">
-                        <i class="fas fa-laptop-code text-white text-4xl opacity-50"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-3">E-Commerce Platform</h3>
-                        <p class="text-slate-500 mb-4">A comprehensive online shopping solution with modern design and seamless user experience.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">React</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Node.js</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">MongoDB</span>
+                <div class="card-enhanced overflow-hidden group">
+                    <div class="project-image h-56 bg-gradient-to-br from-slate-800 to-slate-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <i class="fas fa-laptop-code text-white text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30"></i>
+                        <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">E-commerce</span>
                         </div>
-                        <a href="#" class="text-blue-700 font-semibold text-sm hover:text-blue-900 transition-colors duration-300">View Details →</a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">E-Commerce Platform</h3>
+                        <p class="text-slate-600 mb-6 line-clamp-3">A comprehensive online shopping solution with modern design and seamless user experience.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full border border-blue-200">React</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-200">Node.js</span>
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs rounded-full border border-purple-200">MongoDB</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-slate-800 font-semibold hover:text-slate-600 transition-colors duration-300">
+                            View Details 
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="project-card rounded-xl overflow-hidden shadow-md transition-all duration-300 relative bg-gray-50 hover:-translate-y-3 hover:shadow-lg">
-                    <div class="project-image h-48 bg-gradient-to-br from-purple-600 to-pink-400 relative overflow-hidden transition-all duration-300 flex items-center justify-center">
-                        <i class="fas fa-mobile-alt text-white text-4xl opacity-50"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-3">Mobile Banking App</h3>
-                        <p class="text-slate-500 mb-4">Secure and intuitive mobile banking application with advanced financial features.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Flutter</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Firebase</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">API</span>
+                <div class="card-enhanced overflow-hidden group">
+                    <div class="project-image h-56 bg-gradient-to-br from-slate-800 to-slate-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <i class="fas fa-mobile-alt text-white text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30"></i>
+                        <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">Mobile App</span>
                         </div>
-                        <a href="#" class="text-blue-700 font-semibold text-sm hover:text-blue-900 transition-colors duration-300">View Details →</a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Mobile Banking App</h3>
+                        <p class="text-slate-600 mb-6 line-clamp-3">Secure and intuitive mobile banking application with advanced financial features.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full border border-blue-200">Flutter</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-200">Firebase</span>
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs rounded-full border border-purple-200">API</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-slate-800 font-semibold hover:text-slate-600 transition-colors duration-300">
+                            View Details 
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="project-card rounded-xl overflow-hidden shadow-md transition-all duration-300 relative bg-gray-50 hover:-translate-y-3 hover:shadow-lg">
-                    <div class="project-image h-48 bg-gradient-to-br from-green-600 to-teal-400 relative overflow-hidden transition-all duration-300 flex items-center justify-center">
-                        <i class="fas fa-chart-bar text-white text-4xl opacity-50"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-3">Analytics Dashboard</h3>
-                        <p class="text-slate-500 mb-4">Real-time data visualization platform for business intelligence and reporting.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Vue.js</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">D3.js</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Python</span>
+                <div class="card-enhanced overflow-hidden group">
+                    <div class="project-image h-56 bg-gradient-to-br from-slate-800 to-slate-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <i class="fas fa-chart-bar text-white text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30"></i>
+                        <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">Analytics</span>
                         </div>
-                        <a href="#" class="text-blue-700 font-semibold text-sm hover:text-blue-900 transition-colors duration-300">View Details →</a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Analytics Dashboard</h3>
+                        <p class="text-slate-600 mb-6 line-clamp-3">Real-time data visualization platform for business intelligence and reporting.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full border border-blue-200">Vue.js</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-200">D3.js</span>
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs rounded-full border border-purple-200">Python</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-slate-800 font-semibold hover:text-slate-600 transition-colors duration-300">
+                            View Details 
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="project-card rounded-xl overflow-hidden shadow-md transition-all duration-300 relative bg-gray-50 hover:-translate-y-3 hover:shadow-lg">
-                    <div class="project-image h-48 bg-gradient-to-br from-orange-600 to-red-400 relative overflow-hidden transition-all duration-300 flex items-center justify-center">
-                        <i class="fas fa-globe text-white text-4xl opacity-50"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-3">Corporate Website</h3>
-                        <p class="text-slate-500 mb-4">Professional corporate website with content management and SEO optimization.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">WordPress</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">PHP</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">MySQL</span>
+                <div class="card-enhanced overflow-hidden group">
+                    <div class="project-image h-56 bg-gradient-to-br from-slate-800 to-slate-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <i class="fas fa-globe text-white text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30"></i>
+                        <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">Website</span>
                         </div>
-                        <a href="#" class="text-blue-700 font-semibold text-sm hover:text-blue-900 transition-colors duration-300">View Details →</a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Corporate Website</h3>
+                        <p class="text-slate-600 mb-6 line-clamp-3">Professional corporate website with content management and SEO optimization.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full border border-blue-200">WordPress</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-200">PHP</span>
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs rounded-full border border-purple-200">MySQL</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-slate-800 font-semibold hover:text-slate-600 transition-colors duration-300">
+                            View Details 
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="project-card rounded-xl overflow-hidden shadow-md transition-all duration-300 relative bg-gray-50 hover:-translate-y-3 hover:shadow-lg">
-                    <div class="project-image h-48 bg-gradient-to-br from-indigo-600 to-blue-400 relative overflow-hidden transition-all duration-300 flex items-center justify-center">
-                        <i class="fas fa-cloud text-white text-4xl opacity-50"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-3">Cloud Management System</h3>
-                        <p class="text-slate-500 mb-4">Scalable cloud infrastructure management platform with automated deployment.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">AWS</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Docker</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Kubernetes</span>
+                <div class="card-enhanced overflow-hidden group">
+                    <div class="project-image h-56 bg-gradient-to-br from-slate-800 to-slate-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <i class="fas fa-cloud text-white text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30"></i>
+                        <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">Cloud</span>
                         </div>
-                        <a href="#" class="text-blue-700 font-semibold text-sm hover:text-blue-900 transition-colors duration-300">View Details →</a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Cloud Management System</h3>
+                        <p class="text-slate-600 mb-6 line-clamp-3">Scalable cloud infrastructure management platform with automated deployment.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full border border-blue-200">AWS</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-200">Docker</span>
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs rounded-full border border-purple-200">Kubernetes</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-slate-800 font-semibold hover:text-slate-600 transition-colors duration-300">
+                            View Details 
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="project-card rounded-xl overflow-hidden shadow-md transition-all duration-300 relative bg-gray-50 hover:-translate-y-3 hover:shadow-lg">
-                    <div class="project-image h-48 bg-gradient-to-br from-pink-600 to-purple-400 relative overflow-hidden transition-all duration-300 flex items-center justify-center">
-                        <i class="fas fa-graduation-cap text-white text-4xl opacity-50"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-700 mb-3">Learning Management System</h3>
-                        <p class="text-slate-500 mb-4">Interactive online learning platform with video streaming and assessment tools.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Angular</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">.NET</span>
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">SQL Server</span>
+                <div class="card-enhanced overflow-hidden group">
+                    <div class="project-image h-56 bg-gradient-to-br from-slate-800 to-slate-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <i class="fas fa-graduation-cap text-white text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30"></i>
+                        <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">E-learning</span>
                         </div>
-                        <a href="#" class="text-blue-700 font-semibold text-sm hover:text-blue-900 transition-colors duration-300">View Details →</a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Learning Management System</h3>
+                        <p class="text-slate-600 mb-6 line-clamp-3">Interactive online learning platform with video streaming and assessment tools.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full border border-blue-200">Angular</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs rounded-full border border-green-200">.NET</span>
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs rounded-full border border-purple-200">SQL Server</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-slate-800 font-semibold hover:text-slate-600 transition-colors duration-300">
+                            View Details 
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -155,11 +204,11 @@
         </div>
     </section>
 
-    <section class="py-24 bg-gray-50 text-center">
+    <section class="py-24 bg-stone-100 text-center">
         <div class="w-11/12 max-w-4xl mx-auto px-4">
-            <h2 class="text-4xl font-bold font-montserrat text-blue-700 mb-6">Ready to Start Your Project?</h2>
+            <h2 class="text-4xl font-bold font-montserrat text-slate-800 mb-6">Ready to Start Your Project?</h2>
             <p class="text-xl text-slate-600 mb-8">Let's discuss how we can bring your ideas to life with our expertise and innovative solutions.</p>
-            <a href="contact.html" class="btn inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg tracking-wider transition-all duration-300 border-2 border-blue-700 shadow-sm relative overflow-hidden z-10 hover:bg-blue-900 hover:border-blue-900 hover:-translate-y-1 hover:shadow-md">Get Started Today</a>
+            <a href="contact.html" class="btn inline-block bg-slate-800 text-white px-8 py-4 rounded-full font-semibold text-lg tracking-wider transition-all duration-300 border-2 border-slate-800 shadow-sm relative overflow-hidden z-10 hover:bg-slate-900 hover:border-slate-900 hover:-translate-y-1 hover:shadow-md">Get Started Today</a>
         </div>
     </section>
 
@@ -171,14 +220,11 @@
                     <p class="opacity-90">From Concept to Code</p>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="text-white ml-6 text-2xl opacity-90 transition-all duration-300 inline-block hover:text-sky-400 hover:-translate-y-1 hover:opacity-100"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white ml-6 text-2xl opacity-90 transition-all duration-300 inline-block hover:text-sky-400 hover:-translate-y-1 hover:opacity-100"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white ml-6 text-2xl opacity-90 transition-all duration-300 inline-block hover:text-sky-400 hover:-translate-y-1 hover:opacity-100"><i class="fas fa-envelope"></i></a>
-                    <a href="#" class="text-white ml-6 text-2xl opacity-90 transition-all duration-300 inline-block hover:text-sky-400 hover:-translate-y-1 hover:opacity-100"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white ml-6 text-2xl opacity-90 transition-all duration-300 inline-block hover:text-slate-300 hover:-translate-y-1 hover:opacity-100"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white ml-6 text-2xl opacity-90 transition-all duration-300 inline-block hover:text-slate-300 hover:-translate-y-1 hover:opacity-100"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white ml-6 text-2xl opacity-90 transition-all duration-300 inline-block hover:text-slate-300 hover:-translate-y-1 hover:opacity-100"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="text-white ml-6 text-2xl opacity-90 transition-all duration-300 inline-block hover:text-slate-300 hover:-translate-y-1 hover:opacity-100"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-            </div>
-            <div class="copyright text-center pt-6 border-t border-white/10 text-sm opacity-80">
-                <p>&copy; 2025 NextStep. All rights reserved.</p>
             </div>
         </div>
     </footer>

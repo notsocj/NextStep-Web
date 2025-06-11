@@ -52,7 +52,7 @@
         right: -100%;
         width: 70%;
         height: 100vh;
-        background-color: #F8F9FA;
+        background-color: #E8E8D0;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -71,7 +71,20 @@
     }
     
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.25rem;
+    }
+    
+    .hero-content .btn {
+        font-size: 1rem;
+        padding: 12px 24px;
     }
     
     .footer-content {
@@ -95,6 +108,11 @@
         padding: 150px 0 80px;
     }
     
+    /* Smaller hero sections for secondary pages */
+    .hero-section:not(.home-hero) {
+        padding: 120px 0 60px;
+    }
+    
     .service-card:hover, .project-card:hover {
         transform: translateY(-8px);
     }
@@ -110,6 +128,15 @@
     .footer-logo-img {
         max-height: 50px;
     }
+    
+    .hero-section {
+        background-position: center center !important;
+        background-attachment: scroll;
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(to bottom right, rgba(10, 26, 62, 0.85), rgba(5, 18, 38, 0.75)) !important;
+    }
 }
 
 /* Small devices (mobile phones, 576px and up) */
@@ -122,8 +149,13 @@
         padding: 140px 0 70px;
     }
     
-    .hero h1 {
-        font-size: 2rem;
+    /* Smaller hero sections for secondary pages */
+    .hero-section:not(.home-hero) {
+        padding: 110px 0 50px;
+    }
+    
+    .hero-section:not(.home-hero) h1 {
+        font-size: 2.5rem;
     }
     
     section {
@@ -149,5 +181,28 @@
     
     .nav-links {
         width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-content .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+    
+    .hero-section {
+        background-position: center center !important;
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(to bottom right, rgba(10, 26, 62, 0.9), rgba(5, 18, 38, 0.8)) !important;
     }
 }
