@@ -14,25 +14,25 @@
 </head>
 <body class="font-poppins leading-relaxed text-slate-800 bg-stone-100 overflow-x-hidden">    <header class="bg-stone-100 shadow-sm fixed w-full top-0 z-50 transition-all duration-300">
         <div class="w-11/12 max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
+            <div class="header-container">
+                <div class="logo-container">
                     <a href="index.html">
-                        <img src="images/logo.png" alt="NextStep Logo" class="max-h-12 w-auto transition-transform duration-300 hover:scale-105">
+                        <img src="images/logo.png" alt="NextStep Logo">
                     </a>
                 </div>
-                <nav>
-                    <ul class="nav-links flex list-none">
-                        <li class="ml-9"><a href="index.html" class="nav-link text-slate-700 font-medium relative pb-1">Home</a></li>
-                        <li class="ml-9"><a href="services.html" class="nav-link text-slate-700 font-medium relative pb-1">Services</a></li>
-                        <li class="ml-9"><a href="projects.html" class="nav-link text-slate-700 font-medium relative pb-1">Projects</a></li>
-                        <li class="ml-9"><a href="testimonials.html" class="nav-link text-slate-700 font-medium relative pb-1">Testimonials</a></li>
-                        <li class="ml-9"><a href="team.html" class="nav-link text-slate-700 font-medium relative pb-1">Our Team</a></li>
-                        <li class="ml-9"><a href="contact.html" class="nav-link active text-slate-700 font-medium relative pb-1">Contact</a></li>
+                <nav class="nav-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="projects.html" class="nav-link">Projects</a></li>
+                        <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                        <li><a href="team.html" class="nav-link">Our Team</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
                     </ul>
-                    <div class="hamburger hidden cursor-pointer z-30">
-                        <span class="block w-7 h-0.5 my-1.5 bg-slate-800 transition-all duration-300 rounded"></span>
-                        <span class="block w-7 h-0.5 my-1.5 bg-slate-800 transition-all duration-300 rounded"></span>
-                        <span class="block w-7 h-0.5 my-1.5 bg-slate-800 transition-all duration-300 rounded"></span>
+                    <div class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </nav>
             </div>
@@ -99,7 +99,7 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-bold text-slate-800 mb-1">Our Location</h3>
-                                    <p class="text-slate-600 text-sm">123 Business Avenue, Tech District<br>Manila, Philippines 1000</p>
+                                    <p class="text-slate-600 text-sm">Molino IV<br>Bacoor, Cavite 4102</p>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,6 @@
                                 <div>
                                     <h3 class="text-lg font-bold text-slate-800 mb-1">Email Address</h3>
                                     <p class="text-slate-600 text-sm">businesstech.nextstep@gmail.com</p>
-                                    <p class="text-slate-600 text-sm">support@nextstep.com</p>
                                 </div>
                             </div>
                         </div>
@@ -124,8 +123,8 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-bold text-slate-800 mb-1">Phone Number</h3>
-                                    <p class="text-slate-600 text-sm">+63 (2) 8123 4567</p>
-                                    <p class="text-slate-600 text-sm">+63 917 123 4567</p>
+                                    <p class="text-slate-600 text-sm">+63 9560596126</p>
+                                    <p class="text-slate-600 text-sm">+63 9942457221</p>
                                 </div>
                             </div>
                         </div>
@@ -148,14 +147,11 @@
                             <div class="text-center">
                                 <h3 class="text-lg font-bold text-slate-800 mb-4">Connect With Us</h3>
                                 <div class="flex justify-center space-x-3">
-                                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:bg-slate-700 hover:-translate-y-1">
+                                    <a href="https://www.facebook.com/Nextstepinco/" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:bg-slate-700 hover:-translate-y-1">
                                         <i class="fab fa-facebook-f text-sm"></i>
                                     </a>
-                                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:bg-slate-700 hover:-translate-y-1">
+                                    <a href="https://www.instagram.com/#" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:bg-slate-700 hover:-translate-y-1">
                                         <i class="fab fa-instagram text-sm"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:bg-slate-700 hover:-translate-y-1">
-                                        <i class="fab fa-twitter text-sm"></i>
                                     </a>
                                     <a href="#" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:bg-slate-700 hover:-translate-y-1">
                                         <i class="fab fa-linkedin-in text-sm"></i>
@@ -167,14 +163,7 @@
                 </div>
             </div>
         </div>
-    </section><section class="py-12 bg-stone-100">
-        <div class="w-11/12 max-w-6xl mx-auto px-4">            <div class="map-container rounded-xl overflow-hidden shadow-md h-96">
-                <div class="bg-slate-200 h-full w-full flex items-center justify-center">
-                    <p class="text-slate-500">Map will be embedded here</p>
-                </div>
-            </div>
-        </div>
-    </section>    <footer class="footer-section text-white pt-16 pb-5 relative">
+   <footer class="footer-section text-white pt-16 pb-5 relative">
         <div class="w-11/12 max-w-6xl mx-auto px-4">
             <div class="footer-content flex justify-between items-center mb-10">
                 <div class="footer-logo flex flex-col items-start">

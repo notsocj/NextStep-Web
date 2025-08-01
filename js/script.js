@@ -4,48 +4,83 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
     
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
+    // Initialize hamburger menu if elements exist
+    if (hamburger && navLinks) {
+        // Set initial ARIA attributes
+        hamburger.setAttribute('aria-expanded', 'false');
+        navLinks.setAttribute('aria-hidden', 'true');
+        
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.contains('active');
+            
+            // Toggle classes
+            hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
             body.classList.toggle('nav-open');
             
-            const spans = hamburger.querySelectorAll('span');
-            spans.forEach(span => {
-                span.classList.toggle('active');
-            });
+            // Update ARIA attributes
+            hamburger.setAttribute('aria-expanded', !isOpen);
+            navLinks.setAttribute('aria-hidden', isOpen);
             
-            // Improved accessibility
-            const isOpen = navLinks.classList.contains('active');
-            hamburger.setAttribute('aria-expanded', isOpen);
-            navLinks.setAttribute('aria-hidden', !isOpen);
+            // Prevent body scroll when menu is open
+            if (!isOpen) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
         });
-    }
-    
-    // Close nav on outside click
-    document.addEventListener('click', function(e) {
-        if (!hamburger.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+        
+        // Close nav on outside click
+        document.addEventListener('click', function(e) {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+                closeNavigation();
+            }
+        });
+        
+        // Enhanced nav item interactions
+        const navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                if (navLinks.classList.contains('active')) {
+                    closeNavigation();
+                }
+            });
+        });
+        
+        // Close navigation function
+        function closeNavigation() {
+            hamburger.classList.remove('active');
             navLinks.classList.remove('active');
             body.classList.remove('nav-open');
             hamburger.setAttribute('aria-expanded', 'false');
             navLinks.setAttribute('aria-hidden', 'true');
-            
-            const spans = hamburger.querySelectorAll('span');
-            spans.forEach(span => span.classList.remove('active'));
+            body.style.overflow = '';
         }
-    });
-    
-    // Enhanced nav item interactions
-    const navItems = document.querySelectorAll('.nav-links a');
-    navItems.forEach(item => {
-        item.addEventListener('click', function() {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                body.classList.remove('nav-open');
-                
-                const spans = hamburger.querySelectorAll('span');
-                spans.forEach(span => span.classList.remove('active'));
+        
+        // Handle escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                closeNavigation();
             }
         });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                closeNavigation();
+            }
+        });
+    }
+    
+    // Close nav on page load if open (for desktop)
+    window.addEventListener('load', function() {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('active');
+            body.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            navLinks.setAttribute('aria-hidden', 'true');
+        }
     });
     
     // Smooth scrolling with offset for fixed header
